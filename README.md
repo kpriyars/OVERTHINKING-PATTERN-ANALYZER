@@ -1,8 +1,7 @@
 <p align="center">
   <img src="https://media1.tenor.com/m/F63Fn0aFYRwAAAAC/pattern-header.gif" width="600">
 </p>
-# 🕹️ Overthinking Pattern Analyzer
-> *“Let’s understand your thoughts, one pixel at a time.”*
+# <h1>OVERTHINKING PATTERN ANALYZER</h1>
 
 An interactive, retro-styled web application designed to help users identify and categorize their overthinking patterns. Built with a 1980s console aesthetic, featuring 8-bit visuals and empathetic logic.
 
