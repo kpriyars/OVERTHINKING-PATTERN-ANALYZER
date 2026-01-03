@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overthinking Pattern Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container" class="pixel-border">
+        <section id="screen-landing" class="screen active">
+            <h1 class="pixel-text color-blink">OVERTHINKING<br>ANALYZER</h1>
+            <div class="character-box">
+                <div class="pixel-character idle"></div>
+            </div>
+            <p class="subtext">Analyze your thoughts, one pixel at a time.</p>
+            <button class="pixel-btn" onclick="navigateTo('screen-input')">START ANALYSIS</button>
+        </section>
+
+        <section id="screen-input" class="screen">
+            <div class="dialogue-box">
+                <p>What is heavy on your mind right now?</p>
+                <textarea id="thought-input" placeholder="Type your thought here..."></textarea>
+                <button class="pixel-btn" onclick="saveThought()">CONTINUE</button>
+            </div>
+        </section>
+
+        <section id="screen-quiz" class="screen">
+            <div id="question-container" class="dialogue-box">
+                <p id="npc-text">Is this thought recurring?</p>
+                <div id="options-container">
+                    </div>
+            </div>
+        </section>
+
+        <section id="screen-results" class="screen">
+            <h2 class="pixel-text">ANALYSIS COMPLETE</h2>
+            <div class="result-card pixel-border-thin">
+                <p>Pattern: <span id="res-pattern" class="highlight">---</span></p>
+                <p>Intensity: <span id="res-intensity">---</span></p>
+                <div id="intensity-bar"><div id="intensity-fill"></div></div>
+                <p id="res-message" class="support-msg"></p>
+            </div>
+            <canvas id="patternChart" width="200" height="100"></canvas>
+            <button class="pixel-btn" onclick="location.reload()">RESTART</button>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
