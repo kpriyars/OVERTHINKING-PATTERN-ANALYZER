@@ -1,0 +1,85 @@
+:root {
+    --bg-color: #1a1a2e;
+    --pixel-green: #00ff41;
+    --pixel-pink: #ff00ff;
+    --pixel-blue: #00d4ff;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: #000;
+    color: var(--text-color);
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    width: 90%;
+    max-width: 500px;
+    height: 600px;
+    background: var(--bg-color);
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    border: 4px solid #fff;
+    box-shadow: 8px 8px 0px #333;
+}
+
+.screen { display: none; flex-direction: column; align-items: center; justify-content: space-around; height: 100%; }
+.screen.active { display: flex; }
+
+/* Pixel Character Animation */
+.pixel-character {
+    width: 64px;
+    height: 64px;
+    background: var(--pixel-pink);
+    margin: 20px auto;
+    position: relative;
+    animation: hover 2s infinite ease-in-out;
+}
+
+@keyframes hover {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Retro UI Elements */
+.pixel-btn {
+    background: var(--pixel-blue);
+    border: none;
+    padding: 15px;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #005a6e;
+    font-size: 10px;
+    transition: transform 0.1s;
+}
+
+.pixel-btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0px #005a6e; }
+
+textarea {
+    background: #000;
+    color: var(--pixel-green);
+    border: 2px solid #fff;
+    font-family: 'Press Start 2P', cursive;
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    font-size: 10px;
+}
+
+.dialogue-box {
+    border: 3px solid #fff;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 90%;
+}
+
+#intensity-bar { width: 100%; height: 20px; border: 2px solid #fff; margin: 10px 0; }
+#intensity-fill { height: 100%; background: var(--pixel-pink); width: 0%; transition: width 0.5s; }
