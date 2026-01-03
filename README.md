@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://media1.tenor.com/m/F63Fn0aFYRwAAAAC/pattern-header.gif" width="600">
+</p>
 # 🕹️ Overthinking Pattern Analyzer
 > *“Let’s understand your thoughts, one pixel at a time.”*
 
